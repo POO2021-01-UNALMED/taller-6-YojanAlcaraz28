@@ -2,7 +2,7 @@ package vehiculos;
 
 public class Pais {
 	protected String nombre;
-	
+
 	public Pais(String pais) {
 		this.nombre = pais;
 	}
@@ -14,11 +14,11 @@ public class Pais {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
-	//Metodos.
-	
-	/*public String paisMasVendedor(Pais pais) {
-		return 
-	}*/
 
+	// Metodos.
+
+	public String paisMasVendedor(Pais pais) {
+		return pais;
+
+	}
 }

@@ -17,8 +17,8 @@ public class Pais {
 
 	// Metodos.
 
-	public String paisMasVendedor(Pais pais) {
+	/*public String paisMasVendedor(Pais pais) {
 		return pais;
 
-	}
+	}*/
 }

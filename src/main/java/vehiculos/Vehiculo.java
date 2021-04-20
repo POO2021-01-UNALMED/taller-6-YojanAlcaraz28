@@ -3,8 +3,6 @@ package vehiculos;
 import java.util.ArrayList;
 
 
-
-
 public class Vehiculo {
 	private String placa;
 	private int puertas;
@@ -16,6 +14,7 @@ public class Vehiculo {
 	private Fabricante fabricante;
 	/*protected ArrayList<Vehiculo> vehiculos = new ArrayList<Vehiculo>();*/
 	public static int cantidadVehiculos;
+	public static  ArrayList<Vehiculo> vehiculos = new ArrayList<Vehiculo>();
 
 	
 	public Vehiculo(String placa, int puertas, int velMaxima, String nombre, int precio, int peso,String traccion, Fabricante fabricante) {
@@ -98,11 +97,21 @@ public class Vehiculo {
 	public void setFabricante(Fabricante fabricante) {
 		this.fabricante = fabricante;
 	}
+	
+	public static ArrayList<Vehiculo> getVehiculos() {
+		return vehiculos;
+	}
+
+	public static void setVehiculos(ArrayList<Vehiculo> vehiculos) {
+		Vehiculo.vehiculos = vehiculos;
+	}
 
 	
 	
 	//Metodos.
 	
+	
+
 	public static int getCantidadVehiculos() {
 		return cantidadVehiculos;
 	}
@@ -112,9 +121,9 @@ public class Vehiculo {
 	}
 	
 	public static String vehiculosPorTipo() {
-		return "Automoviles: " + Automovil.numAutos+
-				"\nCamionetas: " + Camioneta.numCamionetas+
-				"\nCamiones: " + Camion.numCamiones;
+		return "Automoviles: " + Automovil.getAutomoviles().size()+
+				"\nCamionetas: " + Camioneta.getCamionetas().size()+
+				"\nCamiones: " + Camion.getCamiones().size();
 	}
 
 
